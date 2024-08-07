@@ -7,7 +7,7 @@ import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
 import { ACESFilmicToneMapping, Mesh } from 'three';
 
 const Model = () => {
-	const gltf = useLoader(GLTFLoader, '/path/to/your/model.glb');
+	const gltf = useLoader(GLTFLoader, '/models/macbook.gltf');
 	return <primitive object={gltf.scene} />;
 };
 
@@ -53,7 +53,7 @@ function Scene({ margin = 0.5 }) {
 	const { width, height } = useThree((state) => state.viewport);
 	return (
 		<>
-			<Center bottom right position={[-width / 2 + margin, height / 2 - margin, 0]}>
+			{/* <Center bottom right position={[-width / 2 + margin, height / 2 - margin, 0]}>
 				<Text3D letterSpacing={-0.06} size={0.5} font="/Inter_Bold.json">
 					top left
 					<meshStandardMaterial color="white" />
@@ -64,7 +64,7 @@ function Scene({ margin = 0.5 }) {
 					bottom right
 					<meshStandardMaterial color="white" />
 				</Text3D>
-			</Center>
+			</Center> */}
 			<Center rotation={[-0.5, -0.25, 0]}>
 				<Text3D
 					curveSegments={32}
@@ -72,11 +72,11 @@ function Scene({ margin = 0.5 }) {
 					bevelSize={0.04}
 					bevelThickness={0.1}
 					height={0.5}
-					lineHeight={0.5}
+					lineHeight={0.75}
 					letterSpacing={-0.06}
 					size={1.5}
 					font="/Inter_Bold.json">
-					{`hello\nworld`}
+					{`Open To\nWork`}
 					<meshNormalMaterial />
 				</Text3D>
 				{/* <Center position={[-1.25, 0, 0]}>

@@ -1,22 +1,67 @@
-// components/Hero.js
-import { Button } from '@/components/ui/button';
-import AnimatedShinyText from '@/components/magicui/animated-shiny-text';
-import ThreeDScene from '@/components/ThreeDScene';
+'use client';
+import React from 'react';
+import Link from 'next/link';
+import BlurFade from '@/components/magicui/blur-fade';
+import BlurFadeText from '@/components/magicui/blur-fade-text';
+import { DATA } from '@/data/resume';
+import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
+import { Icons } from '@/components/icons';
+import { cn } from '@/lib/utils';
+import { Button, buttonVariants } from '@/components/ui/button';
 
-const Hero = () => {
+export default function Hero({ fadeDelay }: { fadeDelay: number }) {
+	const handleSendEmail = () => {
+		window.location.href = `mailto:miliu@ucsd.edu?subject=Nice to meet you!&body=`;
+	};
+
 	return (
-		<section className="h-screen flex flex-col justify-center items-center text-center p-6">
-			<h1 className="text-4xl md:text-6xl font-bold mb-4 animate-fade-in">
-				<AnimatedShinyText>Welcome to My Portfolio</AnimatedShinyText>
-			</h1>
-			<p className="text-lg md:text-2xl mb-8 animate-fade-in">
-				I am a passionate developer with skills in Next.js, Tailwind CSS, and Shadcn.
-			</p>
-			<Button className="bg-gold hover:bg-gold-dark text-navy px-4 py-2 rounded animate-slide-up">
-				Get in Touch
-			</Button>
-			<ThreeDScene />
+		<section id="hero" className="min-h-[350px] flex items-center">
+			{/* <div className="h-96 p-10">
+					<ThreeDScene />
+				</div> */}
+			<div className="mx-auto w-full space-y-8">
+				<div className="flex space-x-4 items-center">
+					<div className="flex-col flex space-y-1">
+						<BlurFadeText
+							delay={fadeDelay}
+							className="text-4xl font-bold tracking-tighter sm:text-6xl xl:text-8xl"
+							yOffset={8}
+							text={`${DATA.name} `}
+						/>
+						<BlurFadeText className="max-w-[600px] text-xl" delay={fadeDelay} text={DATA.role} />
+						<BlurFadeText
+							className="max-w-[600px] text-base text-gray-500"
+							delay={fadeDelay}
+							text={DATA.description}
+						/>
+						<BlurFade delay={fadeDelay} className="flex flex-row space-x-1">
+							<Link
+								href="https://github.com/lmy0125"
+								className={cn(buttonVariants({ variant: 'ghost', size: 'icon' }), 'size-10')}
+								rel="noopener noreferrer"
+								target="_blank">
+								<Icons.github className="size-6" />
+							</Link>
+							<Link
+								href="https://www.linkedin.com/in/mingyang-liu-891148196/"
+								className={cn(buttonVariants({ variant: 'ghost', size: 'icon' }), 'size-10')}
+								rel="noopener noreferrer"
+								target="_blank">
+								<Icons.linkedin className="size-6" />
+							</Link>
+							<Button onClick={handleSendEmail} variant="ghost" size="icon">
+								<Icons.email className="size-6" />
+							</Button>
+						</BlurFade>
+					</div>
+					<BlurFade delay={fadeDelay}>
+						<Avatar className="sm:size-48 size-40 border">
+							<AvatarImage alt={DATA.name} src={DATA.avatarUrl} />
+							<AvatarFallback>{DATA.initials}</AvatarFallback>
+						</Avatar>
+					</BlurFade>
+				</div>
+			</div>
 		</section>
 	);
-};
-export default Hero;
+}
