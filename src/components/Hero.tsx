@@ -24,7 +24,7 @@ export default function Hero({ fadeDelay }: { fadeDelay: number }) {
 					<div className="flex-col flex space-y-1">
 						<BlurFadeText
 							delay={fadeDelay}
-							className="text-4xl font-bold tracking-tighter sm:text-6xl xl:text-8xl"
+							className="text-4xl sm:text-6xl xl:text-8xl font-semibold tracking-tighter"
 							yOffset={8}
 							text={`${DATA.name} `}
 						/>

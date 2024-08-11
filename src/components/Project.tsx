@@ -2,8 +2,6 @@
 import { Project } from '@/types/project';
 import Image, { StaticImageData } from 'next/image';
 import React, { useState } from 'react';
-import { Heading } from '@/components/Heading';
-import { Paragraph } from '@/components/Paragraph';
 import { Badge } from '@/components/ui/badge';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
@@ -13,7 +11,7 @@ export const SingleProduct = ({ project }: { project: Project }) => {
 	return (
 		<div className="py-2">
 			<div className="flex lg:flex-row justify-between items-center flex-col mb-10">
-				<Heading className="font-black pb-1">{project.title}</Heading>
+				<h1 className="text-2xl sm:text-3xl xl:text-4xl font-bold tracking-tight pb-1">{project.title}</h1>
 				{project.href && (
 					<Link
 						href={project.href}
@@ -83,9 +81,9 @@ export const SingleProduct = ({ project }: { project: Project }) => {
 				))}
 			</div>
 			<div>
-				<Paragraph className="max-w-xl mt-4">{project.description}</Paragraph>
+				<p className="lg:text-lg max-w-3xl text-neutral-500 mt-4">{project.description}</p>
 			</div>
-			<div className="prose prose-sm md:prose-base max-w-none text-neutral-600">{project?.content}</div>
+			<div className="prose lg:prose-lg max-w-none prose-stone">{project?.content}</div>
 		</div>
 	);
 };

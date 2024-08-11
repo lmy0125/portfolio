@@ -2,13 +2,13 @@ import { ThemeProvider } from '@/components/theme-provider';
 import { DATA } from '@/data/resume';
 import { cn } from '@/lib/utils';
 import type { Metadata } from 'next';
-import { Inter as FontSans } from 'next/font/google';
+import { Open_Sans } from 'next/font/google';
 import './globals.css';
 import Navbar from '@/components/Navbar';
 import { motion } from 'framer-motion';
 import { AuroraBackground } from '@/components/aceui/aurora-background';
 
-const fontSans = FontSans({
+const fontSans = Open_Sans({
 	subsets: ['latin'],
 	variable: '--font-sans',
 });
@@ -56,7 +56,7 @@ export default function RootLayout({
 }>) {
 	return (
 		<html lang="en" suppressHydrationWarning>
-			<body className={cn('min-h-screen bg-background font-sans antialiased ', fontSans.variable)}>
+			<body className={cn('min-h-screen bg-background antialiased', fontSans.className)}>
 				{/* <AuroraBackground> */}
 				<Navbar />
 				{children}
