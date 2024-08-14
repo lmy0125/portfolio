@@ -28,9 +28,9 @@ export default function Hero({ fadeDelay }: { fadeDelay: number }) {
 							yOffset={8}
 							text={`${DATA.name} `}
 						/>
-						<BlurFadeText className="max-w-[600px] text-xl" delay={fadeDelay} text={DATA.role} />
+						<BlurFadeText className="max-w-[600px] text-2xl" delay={fadeDelay} text={DATA.role} />
 						<BlurFadeText
-							className="max-w-[600px] text-base text-gray-500"
+							className="max-w-[600px] text-lg text-gray-500"
 							delay={fadeDelay}
 							text={DATA.description}
 						/>

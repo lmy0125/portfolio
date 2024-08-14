@@ -16,7 +16,7 @@ import Meteors from '@/components/magicui/meteors';
 import IconCloud from '@/components/magicui/icon-cloud';
 import Hero from '@/components/Hero';
 
-const BLUR_FADE_DELAY = 0.1;
+const BLUR_FADE_DELAY = 0.06;
 
 const cloudIcons = [
 	'typescript',
@@ -129,11 +129,11 @@ export default function Home() {
 						<BlurFade delay={BLUR_FADE_DELAY * 11}>
 							<div className="flex flex-col items-center justify-center space-y-4 text-center">
 								<div className="space-y-2">
-									<div className="inline-block rounded-lg bg-foreground text-background px-3 py-1 text-sm">
+									<div className="inline-block rounded-lg bg-foreground text-background px-3 py-1">
 										My Projects
 									</div>
-									<h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">Check out my latest work</h2>
-									<p className="text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
+									{/* <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">Check out my latest work</h2> */}
+									<p className="text-neutral-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
 										I&apos;ve worked on a variety of projects, from simple websites to complex web
 										applications.
 									</p>

@@ -38,7 +38,7 @@ const PDFDisplayPage = () => {
 		<div className="relative flex flex-col items-center min-h-[100dvh] p-4 w-full">
 			<div className="p-6 max-w-3xl w-full">
 				<div className="flex justify-between items-center mb-4">
-					<h1 className="text-2xl font-bold text-gray-800">Resume</h1>
+					<h1 className="text-2xl sm:text-3xl xl:text-4xl font-bold tracking-tight">Resume</h1>
 					<Button onClick={handleDownload} className="flex items-center gap-2">
 						<Download size={20} />
 						Download
