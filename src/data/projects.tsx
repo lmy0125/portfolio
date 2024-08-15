@@ -117,18 +117,12 @@ export const projects = [
 		),
 	},
 	{
-		title: 'Cloud-Based File Storage Server',
-		slug: 'cloud-based-file-storage-server',
+		title: 'Cloud Storage Server',
+		slug: 'cloud-storage-server',
 		dates: 'Jan 2023 - Mar 2023',
 		description: 'A distributed cloud storage server under the RAFT protocol.',
 		stack: ['Golang', 'gRPC'],
-		links: [
-			{
-				type: 'Website',
-				href: 'https://automatic.chat',
-				icon: <Icons.globe className="size-3" />,
-			},
-		],
+		github: 'https://github.com/lmy0125/Cloud-Storage-Server',
 		image: '',
 		video: '/videos/raft.mov',
 		content: (
