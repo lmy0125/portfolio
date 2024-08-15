@@ -11,7 +11,7 @@ export const SingleProduct = ({ project }: { project: Project }) => {
 	return (
 		<div className="bt-2 pb-20">
 			<div className="flex lg:flex-row justify-between items-center flex-col mb-8">
-				<h1 className="text-2xl sm:text-3xl xl:text-4xl font-bold tracking-tight pb-1">{project.title}</h1>
+				<h1 className="text-2xl sm:text-3xl xl:text-4xl font-bold tracking-tight pb-1 text-neutral-700">{project.title}</h1>
 				<div className="mt-3 sm:mt-0">
 					{project.github && (
 						<Link

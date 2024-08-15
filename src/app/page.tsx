@@ -4,52 +4,13 @@ import { HackathonCard } from '@/components/hackathon-card';
 import BlurFade from '@/components/magicui/blur-fade';
 import BlurFadeText from '@/components/magicui/blur-fade-text';
 import { ProjectCard } from '@/components/project-card';
-import { ResumeCard } from '@/components/resume-card';
-import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
-import { Badge } from '@/components/ui/badge';
-import { DATA } from '@/data/resume';
 import { projects } from '@/data/projects';
-import Link from 'next/link';
-import Markdown from 'react-markdown';
 import ThreeDScene from '@/components/ThreeDScene';
 import Meteors from '@/components/magicui/meteors';
-import IconCloud from '@/components/magicui/icon-cloud';
 import Hero from '@/components/Hero';
+import BentoInfo from '@/components/BentoInfo';
 
 const BLUR_FADE_DELAY = 0.06;
-
-const cloudIcons = [
-	'typescript',
-	'javascript',
-	'dart',
-	'java',
-	'react',
-	'flutter',
-	'android',
-	'html5',
-	'css3',
-	'nodedotjs',
-	'express',
-	'nextdotjs',
-	'prisma',
-	'amazonaws',
-	'postgresql',
-	'firebase',
-	'nginx',
-	'vercel',
-	'testinglibrary',
-	'jest',
-	'cypress',
-	'docker',
-	'git',
-	'jira',
-	'github',
-	'gitlab',
-	'visualstudiocode',
-	'androidstudio',
-	'sonarqube',
-	'figma',
-];
 
 export default function Home() {
 	return (
@@ -57,77 +18,27 @@ export default function Home() {
 			<Meteors number={10} />
 			<div className="flex flex-col min-h-[100dvh] space-y-10 flex-grow px-8 py-8 max-w-4xl mx-auto ">
 				<Hero fadeDelay={BLUR_FADE_DELAY} />
-				{/* <section id="about">
-					<BlurFade delay={BLUR_FADE_DELAY * 3}>
-						<h2 className="text-xl font-bold">About</h2>
-					</BlurFade>
-					<BlurFade delay={BLUR_FADE_DELAY * 4}>
-						<Markdown className="prose max-w-full text-sm text-muted-foreground dark:prose-invert">
-							{DATA.summary}
-						</Markdown>
-					</BlurFade>
-				</section> */}
-				{/* <section id="work">
+				<section id="skills">
 					<div className="flex min-h-0 flex-col gap-y-3">
-						<BlurFade delay={BLUR_FADE_DELAY * 5}>
-							<h2 className="text-xl font-bold">Work Experience</h2>
+						<BlurFade delay={BLUR_FADE_DELAY * 11}>
+							<div className="flex flex-col items-center justify-center text-center">
+								<div className="space-y-2">
+									<div className="inline-block rounded-lg bg-foreground text-background px-3 py-1">
+										About Me
+									</div>
+									<p className="text-neutral-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
+										I am a fresh graduate with skill set in web development.
+									</p>
+								</div>
+							</div>
 						</BlurFade>
-						{DATA.work.map((work, id) => (
-							<BlurFade key={work.company} delay={BLUR_FADE_DELAY * 6 + id * 0.05}>
-								<ResumeCard
-									key={work.company}
-									logoUrl={work.logoUrl}
-									altText={work.company}
-									title={work.company}
-									subtitle={work.title}
-									href={work.href}
-									badges={work.badges}
-									period={`${work.start} - ${work.end ?? 'Present'}`}
-									description={work.description}
-								/>
-							</BlurFade>
-						))}
+						<BentoInfo />
 					</div>
 				</section>
-				<section id="education">
-					<div className="flex min-h-0 flex-col gap-y-3">
-						<BlurFade delay={BLUR_FADE_DELAY * 7}>
-							<h2 className="text-xl font-bold">Education</h2>
-						</BlurFade>
-						{DATA.education.map((education, id) => (
-							<BlurFade key={education.school} delay={BLUR_FADE_DELAY * 8 + id * 0.05}>
-								<ResumeCard
-									key={education.school}
-									href={education.href}
-									logoUrl={education.logoUrl}
-									altText={education.school}
-									title={education.school}
-									subtitle={education.degree}
-									period={`${education.start} - ${education.end}`}
-									description={education.description}
-								/>
-							</BlurFade>
-						))}
-					</div>
-				</section> */}
-				{/* <section id="skills">
-					<div className="flex min-h-0 flex-col gap-y-3">
-						<BlurFade delay={BLUR_FADE_DELAY * 9}>
-							<h2 className="text-xl font-bold">Skills</h2>
-						</BlurFade>
-						<div className="flex flex-wrap gap-1">
-							{DATA.skills.map((skill, id) => (
-								<BlurFade key={skill} delay={BLUR_FADE_DELAY * 10 + id * 0.05}>
-									<Badge key={skill}>{skill}</Badge>
-								</BlurFade>
-							))}
-						</div>
-					</div>
-				</section> */}
 				<section id="projects">
-					<div className="space-y-12 w-full py-12">
+					<div className="space-y-8 w-full py-12">
 						<BlurFade delay={BLUR_FADE_DELAY * 11}>
-							<div className="flex flex-col items-center justify-center space-y-4 text-center">
+							<div className="flex flex-col items-center justify-center text-center">
 								<div className="space-y-2">
 									<div className="inline-block rounded-lg bg-foreground text-background px-3 py-1">
 										My Projects
@@ -140,7 +51,7 @@ export default function Home() {
 								</div>
 							</div>
 						</BlurFade>
-						<div className="grid grid-cols-1 gap-5 sm:grid-cols-2 max-w-[800px] mx-auto">
+						<div className="grid grid-cols-1 gap-8 sm:grid-cols-2 mx-auto">
 							{projects.map((project, id) => (
 								<BlurFade key={project.title} delay={BLUR_FADE_DELAY * 12 + id * 0.05}>
 									<ProjectCard
