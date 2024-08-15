@@ -18,28 +18,30 @@ export default function Home() {
 			<Meteors number={10} />
 			<div className="flex flex-col min-h-[100dvh] space-y-10 flex-grow px-8 py-8 max-w-4xl mx-auto ">
 				<Hero fadeDelay={BLUR_FADE_DELAY} />
+
 				<section id="skills">
-					<div className="flex min-h-0 flex-col gap-y-3">
-						<BlurFade delay={BLUR_FADE_DELAY * 11}>
-							<div className="flex flex-col items-center justify-center text-center">
+					<div className="flex min-h-0 flex-col">
+						<BlurFade delay={BLUR_FADE_DELAY * 10}>
+							<div className="flex flex-col items-center justify-center text-center mb-4">
 								<div className="space-y-2">
 									<div className="inline-block rounded-lg bg-foreground text-background px-3 py-1">
 										About Me
 									</div>
 									<p className="text-neutral-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-										I am a fresh graduate with skill set in web development.
+										I am a master graduate from UCSD with skill sets in web development.
 									</p>
 								</div>
 							</div>
+							<BentoInfo />
 						</BlurFade>
-						<BentoInfo />
 					</div>
 				</section>
+
 				<section id="projects">
-					<div className="space-y-8 w-full py-12">
+					<div className="w-full py-12">
 						<BlurFade delay={BLUR_FADE_DELAY * 11}>
 							<div className="flex flex-col items-center justify-center text-center">
-								<div className="space-y-2">
+								<div className="space-y-2 mb-4">
 									<div className="inline-block rounded-lg bg-foreground text-background px-3 py-1">
 										My Projects
 									</div>

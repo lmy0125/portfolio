@@ -20,7 +20,7 @@ export default function Hero({ fadeDelay }: { fadeDelay: number }) {
 					<ThreeDScene />
 				</div> */}
 			<div className="mx-auto w-full space-y-8">
-				<div className="flex space-x-4 items-center">
+				<div className="flex justify-around items-center">
 					<div className="flex-col flex space-y-1">
 						<BlurFadeText
 							delay={fadeDelay}
@@ -28,9 +28,9 @@ export default function Hero({ fadeDelay }: { fadeDelay: number }) {
 							yOffset={8}
 							text={`${DATA.name} `}
 						/>
-						<BlurFadeText className="max-w-[600px] text-2xl" delay={fadeDelay} text={DATA.role} />
+						<BlurFadeText className="max-w-[600px] text-lg md:text-2xl" delay={fadeDelay} text={DATA.role} />
 						<BlurFadeText
-							className="max-w-[600px] text-lg text-gray-500"
+							className="max-w-[600px] text-sm md:text-lg text-gray-500"
 							delay={fadeDelay}
 							text={DATA.description}
 						/>
