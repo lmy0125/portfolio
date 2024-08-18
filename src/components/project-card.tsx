@@ -36,7 +36,7 @@ export function ProjectCard({ title, route, description, dates, tags, href, gith
 				)}
 				{image && (
 					<div className="relative h-48 w-full overflow-hidden object-cover object-top ">
-						<Image src={image} alt={title} fill objectFit="cover" className="object-cover object-top" />
+						<Image src={image} alt={title} fill className="object-cover object-top" />
 					</div>
 				)}
 			</Link>

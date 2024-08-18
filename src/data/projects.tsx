@@ -10,7 +10,7 @@ export const projects = [
 		stack: ['Next.js', 'Tailwind', 'Typescript', 'Python', 'Supabase', 'Prisma'],
 		href: 'https://www.uusphere.com',
 		image: '',
-		video: '/videos/uusphere.mov',
+		video: 'https://lmy-portfolio.s3.us-east-2.amazonaws.com/uusphere.mov',
 		content: (
 			<div>
 				<p>
@@ -49,7 +49,7 @@ export const projects = [
 		href: 'https://knowledge-tree-git-main-lmy0125s-projects.vercel.app/',
 		github: 'https://github.com/lmy0125/knowledge-tree',
 		image: '',
-		video: '/videos/knowledge-tree-builder.mov',
+		video: 'https://lmy-portfolio.s3.us-east-2.amazonaws.com/knowledge-tree-builder.mov',
 		content: (
 			<div>
 				<p>
@@ -91,7 +91,7 @@ export const projects = [
 		href: 'https://roomie-green.vercel.app/',
 		github: 'https://github.com/CSE210-G13/my-roommates',
 		image: '',
-		video: '/videos/roomie.mov',
+		video: 'https://lmy-portfolio.s3.us-east-2.amazonaws.com/roomie.mov',
 		content: (
 			<div>
 				<p>
@@ -124,7 +124,7 @@ export const projects = [
 		stack: ['Golang', 'gRPC'],
 		github: 'https://github.com/lmy0125/Cloud-Storage-Server',
 		image: '',
-		video: '/videos/raft.mov',
+		video: 'https://lmy-portfolio.s3.us-east-2.amazonaws.com/raft.mov',
 		content: (
 			<div>
 				<p>

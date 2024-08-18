@@ -86,11 +86,11 @@ const features = [
 						alt="University of California, San Diego"
 						className="object-contain"
 					/>
-					<AvatarFallback>'University of California, San Diego'</AvatarFallback>
+					<AvatarFallback>University of California, San Diego</AvatarFallback>
 				</Avatar>
 				<div className="flex flex-col space-y-2">
-					{DATA.education.map((education, id) => (
-						<div className="flex flex-col items-start justify-between gap-x-2 text-base">
+					{DATA.education.map((education, idx) => (
+						<div key={idx} className="flex flex-col items-start justify-between gap-x-2 text-base">
 							<h3 className="inline-flex items-start justify-center font-semibold leading-none text-xs sm:text-sm">
 								{education.degree}
 							</h3>
@@ -113,4 +113,3 @@ export default function BentoInfo() {
 		</BentoGrid>
 	);
 }
-
