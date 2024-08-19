@@ -11,6 +11,7 @@ import {
 } from "react-icon-cloud";
 
 export const cloudProps: Omit<ICloud, "children"> = {
+  id: 'icon-cloud',
   containerProps: {
     style: {
       display: "flex",
