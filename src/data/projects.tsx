@@ -58,7 +58,7 @@ export const projects = [
 					visually organize information in a way that makes sense to you. This approach allows you to easily expand
 					and delve deeper into any branch of knowledge that piques your curiosity.
 				</p>
-				<p>
+				<div>
 					The tool offers two distinct modes for displaying and interacting with the information:
 					<ul>
 						<li>
@@ -72,7 +72,7 @@ export const projects = [
 							sections to reveal more details.
 						</li>
 					</ul>
-				</p>
+				</div>
 				<p>
 					Whether you prefer a spatial, interactive approach or a more traditional, structured layout, the
 					Knowledge Tree Builder adapts to your learning style, helping you to better understand and retain complex
@@ -175,7 +175,7 @@ export const projects = [
 					accurately modeling the behavior of light, ray tracing can produce high-quality images with realistic
 					lighting, shadows, reflections, and refractions.
 				</p>
-				<p>
+				<div>
 					In this project, I implemented a ray tracing engine using OpenGL, incorporating several advanced
 					techniques to enhance image quality. Key features of the implementation include:
 					<ul>
@@ -195,7 +195,7 @@ export const projects = [
 							they move away from the occluding object.
 						</li>
 					</ul>
-				</p>
+				</div>
 				<p>
 					By integrating these techniques, the project aimed to push the boundaries of realistic image rendering,
 					providing an immersive and visually compelling experience. The use of OpenGL facilitated efficient
