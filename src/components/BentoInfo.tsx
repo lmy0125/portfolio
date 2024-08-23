@@ -70,7 +70,7 @@ const features = [
 				))}
 			</div>
 		),
-		className: 'md:col-start-2 md:col-span-3 md:row-start-1 md:row-end-3',
+		className: 'md:col-start-2 md:col-span-2 md:row-start-1 md:row-end-3',
 	},
 	{
 		Icon: GraduationCap,
