@@ -21,7 +21,7 @@ export default function Home() {
 
 				<section id="skills">
 					<div className="flex min-h-0 flex-col">
-						<BlurFade delay={BLUR_FADE_DELAY * 10}>
+						<BlurFade delay={BLUR_FADE_DELAY * 5}>
 							<div className="flex flex-col items-center justify-center text-center mb-4">
 								<div className="space-y-2">
 									<div className="inline-block rounded-lg bg-foreground text-background px-3 py-1">
@@ -32,6 +32,8 @@ export default function Home() {
 									</p>
 								</div>
 							</div>
+						</BlurFade>
+						<BlurFade delay={BLUR_FADE_DELAY * 8}>
 							<BentoInfo />
 						</BlurFade>
 					</div>
