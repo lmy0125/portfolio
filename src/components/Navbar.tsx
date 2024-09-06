@@ -11,13 +11,12 @@ const NavBar = () => {
 
 	const navItems = [
 		{ label: 'Home', href: '/' },
-		{ label: 'Projects', href: '#projects' },
+		{ label: 'Projects', href: '/#projects' },
 		// { label: 'Blogs', href: '/blogs' },
-		// { label: 'Resume', href: '/resume' },
+		{ label: 'Resume', href: '/resume' },
 	];
 
 	return (
-		// <nav className="bg-white shadow-sm">
 		<nav className="relative max-w-7xl mx-auto flex justify-center h-16">
 			<div className="flex items-center space-x-8">
 				{/* <div className="flex-shrink-0 flex items-center">
@@ -40,7 +39,6 @@ const NavBar = () => {
 				</div>
 			</div>
 		</nav>
-		// </nav>
 	);
 };
 
